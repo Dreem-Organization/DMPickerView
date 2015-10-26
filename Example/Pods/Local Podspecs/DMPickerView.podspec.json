@@ -1,0 +1,25 @@
+{
+  "name": "DMPickerView",
+  "version": "0.1.0",
+  "summary": "A short description of DMPickerView.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DMPickerView",
+  "license": "MIT",
+  "authors": {
+    "Olivier Tranzer": "otranzer@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DMPickerView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "DMPickerView": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

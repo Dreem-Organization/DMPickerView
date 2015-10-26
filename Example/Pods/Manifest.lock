@@ -1,0 +1,14 @@
+PODS:
+  - DMPickerView (0.1.0)
+
+DEPENDENCIES:
+  - DMPickerView (from `../`)
+
+EXTERNAL SOURCES:
+  DMPickerView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DMPickerView: 2d964879cbe2f4174dfe634be00cef5b2e956dfa
+
+COCOAPODS: 0.39.0

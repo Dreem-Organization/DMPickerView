@@ -1,0 +1,6 @@
+framework module DMPickerView {
+  umbrella header "DMPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

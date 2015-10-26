@@ -2,12 +2,13 @@
 //  DMViewController.h
 //  DMPickerView
 //
-//  Created by Olivier Tranzer on 10/26/2015.
-//  Copyright (c) 2015 Olivier Tranzer. All rights reserved.
+//  Created by Olivier on 26/10/15.
+//  Copyright © 2015 Olivier Tranzer. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+#import "DMPickerView.h"
 
-@interface DMViewController : UIViewController
+@interface DMViewController : UIViewController<DMPickerViewDatasource, DMPickerViewDelegate>
 
 @end
