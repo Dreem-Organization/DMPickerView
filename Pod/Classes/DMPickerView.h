@@ -23,7 +23,7 @@ typedef enum {
  */
 @property (nonatomic) Orientation orientation;
 /**
- Spacing between the elements. Default is 60.
+ Spacing between the elements. Default is 30.
  */
 @property (nonatomic) CGFloat spacing;
 /**
