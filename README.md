@@ -22,7 +22,7 @@ pod "DMPickerView"
 
 ## Author
 
-Olivier Tranzer, otranzer@gmail.com
+Olivier Tranzer, olivier@dreem.com
 
 ## License
 
