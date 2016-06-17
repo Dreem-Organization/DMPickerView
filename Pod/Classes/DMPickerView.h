@@ -46,6 +46,10 @@ typedef enum {
  Define if the alpha and ratio should be applied always or only when selected. Default is NO
  */
 @property (nonatomic) BOOL shouldUpdateRenderingOnlyWhenSelected;
+/**
+ Should select the middle label visually. only works if shouldUpdateRenderingOnlyWhenSelected is set to YES
+ */
+@property (nonatomic) BOOL shouldSelect;
 
 /**
  Datasource
@@ -100,10 +104,16 @@ typedef enum {
  */
 - (UIColor *)textColorForLabelsForPickerView:(DMPickerView *)pickerView;
 
+
 @end
 
 @protocol DMPickerViewDelegate <NSObject>
 
-- (void)pickerView:(DMPickerView *)pickerView didSelectLabelAtIndex:(NSUInteger)index;
+/**
+ Selected a label.
+ @param index Index of the label
+ @param userTriggered The selection is triggered by the user
+ */
+- (void)pickerView:(DMPickerView *)pickerView didSelectLabelAtIndex:(NSUInteger)index userTriggered:(BOOL)userTriggered;
 
 @end

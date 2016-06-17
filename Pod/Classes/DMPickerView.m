@@ -50,6 +50,7 @@
     self.minAlphaScale = kDefaultMinAlphaScale;
     self.alphaScaleRatio = kDefaultAlphaScaleRatio;
     self.shouldUpdateRenderingOnlyWhenSelected = NO;
+    self.shouldSelect = YES;
 }
 
 - (id)init
@@ -222,15 +223,16 @@
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-
-    // Update views if the option was selected
-    if (self.shouldUpdateRenderingOnlyWhenSelected) [self updateViews];
     
     // Notify delegate
-    if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:didSelectLabelAtIndex:)]) {
-        [self.delegate pickerView:self didSelectLabelAtIndex:self.index];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:didSelectLabelAtIndex:userTriggered:)]) {
+        [self.delegate pickerView:self didSelectLabelAtIndex:self.index userTriggered:YES];
     }
 
+    // Update views if the option was selected
+    if (self.shouldUpdateRenderingOnlyWhenSelected) {
+        [self updateViews];
+    }
 }
 
 #pragma mark - Scroll to neearest neighbour
@@ -317,8 +319,8 @@
 
     // Notify delegate
     self.index = index;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:didSelectLabelAtIndex:)]) {
-        [self.delegate pickerView:self didSelectLabelAtIndex:self.index];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:didSelectLabelAtIndex:userTriggered:)]) {
+        [self.delegate pickerView:self didSelectLabelAtIndex:self.index userTriggered:animated];
     }
 }
 
@@ -345,7 +347,7 @@
             
             // Change alpha according to distance
             CGFloat alphaScale = MAX(1 - self.alphaScaleRatio * distanceFromMiddle/CGRectGetWidth(self.scrollview.bounds), self.minAlphaScale);
-            label.alpha = alphaScale;
+            label.alpha = self.shouldSelect ? alphaScale : self.minAlphaScale;
         }
     } else {
         // Compute the offset of the middle of the visible scroller
@@ -362,7 +364,7 @@
             
             // Change alpha according to distance
             CGFloat alphaScale = MAX(1 - self.alphaScaleRatio * distanceFromMiddle/CGRectGetHeight(self.scrollview.bounds), self.minAlphaScale);
-            label.alpha = alphaScale;
+            label.alpha = self.shouldSelect ? alphaScale : self.minAlphaScale;
         }
     }
 }

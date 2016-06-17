@@ -80,6 +80,20 @@
     [super viewDidLoad];
     
     // Horizontal picker
+    self.horizontalPickerView.datasource = self;
+    self.horizontalPickerView.delegate = self;
+    self.horizontalPickerView.sizeScaleRatio = 1;
+    self.horizontalPickerView.minSizeScale = 1;
+    self.horizontalPickerView.alphaScaleRatio = 30;
+    self.horizontalPickerView.minAlphaScale = 0.3;
+    self.horizontalPickerView.spacing = 30;
+    self.horizontalPickerView.shouldSelect = NO;
+    self.horizontalPickerView.shouldUpdateRenderingOnlyWhenSelected = YES;
+    self.horizontalPickerView.orientation = HORIZONTAL;
+    [self.horizontalPickerView moveToIndex:6 animated:NO];
+    [self.horizontalPickerView reloadData];
+    
+    // Vertical picker
     self.verticalPickerView.datasource = self;
     self.verticalPickerView.delegate = self;
     self.verticalPickerView.sizeScaleRatio = 1;
@@ -91,19 +105,6 @@
     self.verticalPickerView.orientation = VERTICAL;
     [self.verticalPickerView moveToIndex:3 animated:NO];
     [self.verticalPickerView reloadData];
-    
-    // Vertical picker
-    self.horizontalPickerView.datasource = self;
-    self.horizontalPickerView.delegate = self;
-    self.horizontalPickerView.sizeScaleRatio = 1;
-    self.horizontalPickerView.minSizeScale = 1;
-    self.horizontalPickerView.alphaScaleRatio = 30;
-    self.horizontalPickerView.minAlphaScale = 0.3;
-    self.horizontalPickerView.spacing = 30;
-    self.horizontalPickerView.shouldUpdateRenderingOnlyWhenSelected = YES;
-    self.horizontalPickerView.orientation = HORIZONTAL;
-    [self.horizontalPickerView moveToIndex:6 animated:NO];
-    [self.horizontalPickerView reloadData];
 
 }
 
@@ -127,8 +128,9 @@
 
 #pragma mark - DMPickerview delegate
 
-- (void)pickerView:(DMPickerView *)pickerView didSelectLabelAtIndex:(NSUInteger)index {
+- (void)pickerView:(DMPickerView *)pickerView didSelectLabelAtIndex:(NSUInteger)index userTriggered:(BOOL)userTriggered {
     if ([pickerView isEqual:self.horizontalPickerView]) {
+        self.horizontalPickerView.shouldSelect = userTriggered;
         NSLog(@"Horizontal current index: %lu", (unsigned long)self.horizontalPickerView.currentIndex);
     } else {
         NSLog(@"Vertical current index: %lu", (unsigned long)self.verticalPickerView.currentIndex);
