@@ -2,24 +2,21 @@
   "name": "DMPickerView",
   "version": "0.1.0",
   "summary": "A short description of DMPickerView.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DMPickerView",
-  "license": "MIT",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/hackstuces/DMPickerView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
   "authors": {
-    "Olivier Tranzer": "otranzer@gmail.com"
+    "hackstuces": "adrien@rythm.co"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DMPickerView.git",
+    "git": "https://github.com/hackstuces/DMPickerView.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
-  "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "DMPickerView": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "DMPickerView/Classes/**/*"
 }

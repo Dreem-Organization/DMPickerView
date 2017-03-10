@@ -7,33 +7,34 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "DMPickerView"
-  s.version          = "0.1.1"
-  s.summary          = "A custom picker view for iOS"
+  s.name             = 'DMPickerView'
+  s.version          = '0.1.0'
+  s.summary          = 'A custom picker view for iOS'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = "A custom picker view for iOS that allows you much more than the default UIPickerview. 
-  You can for instance make it horizontal, vertical, change the frame, the spacing between the element,
-  the size scaling and the alpha."
+#   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.homepage         = "https://github.com/Dreem-Devices/DMPickerView"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "Olivier Tranzer" => "otranzer@gmail.com" }
-  s.source           = { :git => "https://github.com/Dreem-Devices/DMPickerView.git", :tag => s.version.to_s }
+  s.description      = <<-DESC
+TODO: Add long description of the pod here.
+                       DESC
+
+  s.homepage         = 'https://github.com/hackstuces/DMPickerView'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'hackstuces' => 'adrien@rythm.co' }
+  s.source           = { :git => 'https://github.com/hackstuces/DMPickerView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
-  s.requires_arc = true
+  s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'DMPickerView' => ['Pod/Assets/*.png']
-  }
+  s.source_files = 'DMPickerView/Classes/**/*'
+  
+  # s.resource_bundles = {
+  #   'DMPickerView' => ['DMPickerView/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

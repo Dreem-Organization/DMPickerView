@@ -105,6 +105,9 @@
     // Labels
     CGFloat currentX = CGRectGetWidth(self.bounds) / 2;
     CGFloat currentY = CGRectGetHeight(self.bounds) / 2;
+    UILabel *selectedLabel = self.labels[self.index];
+    [selectedLabel sizeToFit];
+    CGFloat currentHeight = CGRectGetHeight(selectedLabel.frame);
     for (int i = 0 ; i < [self.labels count] ; i++) {
         UILabel *label = self.labels[i];
         [label sizeToFit];
@@ -118,7 +121,7 @@
             label.frame = CGRectMake(CGRectGetMidX(self.bounds) - CGRectGetWidth(label.frame) / 2,
                                      currentY,
                                      CGRectGetWidth(label.frame),
-                                     CGRectGetHeight(label.frame));
+                                     currentHeight);
             currentY += CGRectGetHeight(label.frame) + self.spacing;
         }
     }

@@ -105,7 +105,7 @@
     self.verticalPickerView.orientation = VERTICAL;
     [self.verticalPickerView moveToIndex:3 animated:NO];
     [self.verticalPickerView reloadData];
-
+    
 }
 
 #pragma mark - DMPickerview datasource
