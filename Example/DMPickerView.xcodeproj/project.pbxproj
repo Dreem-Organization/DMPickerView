@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09BBD0C61BDE3B8100A5A75D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BBD0C51BDE3B8100A5A75D /* Launch Screen.storyboard */; };
-		09BBD0CA1BDE3BBD00A5A75D /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BBD0C81BDE3BBD00A5A75D /* DMViewController.m */; };
-		09BBD0CB1BDE3BBD00A5A75D /* DMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09BBD0C91BDE3BBD00A5A75D /* DMViewController.xib */; };
-		2CDC950BC594843A9F44C81E /* Pods_DMPickerView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDCDAB97C17B8B4117B81F4 /* Pods_DMPickerView_Example.framework */; };
-		53DC45554B060278AE48A589 /* Pods_DMPickerView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAF57C86BD262298F5EEEAF /* Pods_DMPickerView_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* DMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* DMAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* DMViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		C487E11E027B98D527E8CDA1 /* Pods_DMPickerView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6705F774AFF8A4281BF86D /* Pods_DMPickerView_Example.framework */; };
+		E27086DD916B2FBA72770DAC /* Pods_DMPickerView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F92E78F7C7A8EEECA4DB59 /* Pods_DMPickerView_Tests.framework */; };
+		FC5CD8661E72C55500884585 /* DMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC5CD8651E72C55500884585 /* DMViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0527F99093DDCBCE5FC6BCAA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		09BBD0C51BDE3B8100A5A75D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		09BBD0C71BDE3BBD00A5A75D /* DMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
-		09BBD0C81BDE3BBD00A5A75D /* DMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
-		09BBD0C91BDE3BBD00A5A75D /* DMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMViewController.xib; sourceTree = "<group>"; };
-		1EAF57C86BD262298F5EEEAF /* Pods_DMPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMPickerView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		525F6F480159B85A7E8E661B /* Pods-DMPickerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Example/Pods-DMPickerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1F6705F774AFF8A4281BF86D /* Pods_DMPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMPickerView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE63204FC812CEA8BDF938A /* Pods-DMPickerView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Tests/Pods-DMPickerView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		30F92E78F7C7A8EEECA4DB59 /* Pods_DMPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMPickerView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* DMPickerView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMPickerView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,6 +50,8 @@
 		6003F59B195388D20070C39A /* DMPickerView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMPickerView-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* DMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* DMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* DMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* DMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* DMPickerView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMPickerView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,12 +59,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		87DDEB4B2278CCC92EC42072 /* DMPickerView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DMPickerView.podspec; path = ../DMPickerView.podspec; sourceTree = "<group>"; };
-		8A49247240350001D52DF184 /* Pods-DMPickerView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Example/Pods-DMPickerView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8BDCDAB97C17B8B4117B81F4 /* Pods_DMPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMPickerView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E87BC39AFE6212716DFE42D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		EFB30F85E606B7F720AAA8E0 /* Pods-DMPickerView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Tests/Pods-DMPickerView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F3D32819AE7D1B75A7D69E47 /* Pods-DMPickerView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Tests/Pods-DMPickerView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7924F3BBEC9B23EC75E10CDE /* Pods-DMPickerView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Example/Pods-DMPickerView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7B68C5F2B4DC1F78D7E3FC37 /* DMPickerView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DMPickerView.podspec; path = ../DMPickerView.podspec; sourceTree = "<group>"; };
+		7D50C52C30F70596222750A2 /* Pods-DMPickerView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Tests/Pods-DMPickerView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C29CEB8191E1B284A6B644F5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E04D53349E86230BCDC2194E /* Pods-DMPickerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickerView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickerView_Example/Pods-DMPickerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F8E65BB512A0C3E8022CDEC3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FC5CD8651E72C55500884585 /* DMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				2CDC950BC594843A9F44C81E /* Pods_DMPickerView_Example.framework in Frameworks */,
+				C487E11E027B98D527E8CDA1 /* Pods_DMPickerView_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,24 +88,13 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				53DC45554B060278AE48A589 /* Pods_DMPickerView_Tests.framework in Frameworks */,
+				E27086DD916B2FBA72770DAC /* Pods_DMPickerView_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03B09F109D94F0C039288C4A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				525F6F480159B85A7E8E661B /* Pods-DMPickerView_Example.debug.xcconfig */,
-				8A49247240350001D52DF184 /* Pods-DMPickerView_Example.release.xcconfig */,
-				F3D32819AE7D1B75A7D69E47 /* Pods-DMPickerView_Tests.debug.xcconfig */,
-				EFB30F85E606B7F720AAA8E0 /* Pods-DMPickerView_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +103,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				03B09F109D94F0C039288C4A /* Pods */,
+				BB6B0BE1A21E9F159A5E6C45 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				8BDCDAB97C17B8B4117B81F4 /* Pods_DMPickerView_Example.framework */,
-				1EAF57C86BD262298F5EEEAF /* Pods_DMPickerView_Tests.framework */,
+				1F6705F774AFF8A4281BF86D /* Pods_DMPickerView_Example.framework */,
+				30F92E78F7C7A8EEECA4DB59 /* Pods_DMPickerView_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,13 +132,14 @@
 		6003F593195388D20070C39A /* Example for DMPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				FC5CD8651E72C55500884585 /* DMViewController.xib */,
 				6003F59C195388D20070C39A /* DMAppDelegate.h */,
 				6003F59D195388D20070C39A /* DMAppDelegate.m */,
+				6003F5A5195388D20070C39A /* DMViewController.h */,
+				6003F5A6195388D20070C39A /* DMViewController.m */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				09BBD0C71BDE3BBD00A5A75D /* DMViewController.h */,
-				09BBD0C81BDE3BBD00A5A75D /* DMViewController.m */,
-				09BBD0C91BDE3BBD00A5A75D /* DMViewController.xib */,
 			);
 			name = "Example for DMPickerView";
 			path = DMPickerView;
@@ -162,7 +152,6 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* DMPickerView-Prefix.pch */,
-				09BBD0C51BDE3B8100A5A75D /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -189,11 +178,22 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				87DDEB4B2278CCC92EC42072 /* DMPickerView.podspec */,
-				E87BC39AFE6212716DFE42D8 /* README.md */,
-				0527F99093DDCBCE5FC6BCAA /* LICENSE */,
+				7B68C5F2B4DC1F78D7E3FC37 /* DMPickerView.podspec */,
+				C29CEB8191E1B284A6B644F5 /* README.md */,
+				F8E65BB512A0C3E8022CDEC3 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		BB6B0BE1A21E9F159A5E6C45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E04D53349E86230BCDC2194E /* Pods-DMPickerView_Example.debug.xcconfig */,
+				7924F3BBEC9B23EC75E10CDE /* Pods-DMPickerView_Example.release.xcconfig */,
+				2EE63204FC812CEA8BDF938A /* Pods-DMPickerView_Tests.debug.xcconfig */,
+				7D50C52C30F70596222750A2 /* Pods-DMPickerView_Tests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,12 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "DMPickerView_Example" */;
 			buildPhases = (
-				73A4E9072DF523087431C66A /* Check Pods Manifest.lock */,
+				7EFE3E2D5A4884B8248174CC /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				A3EAB9711B4ADD6B0153E2D3 /* Embed Pods Frameworks */,
-				5F1B97AED7D0B65692CA2E94 /* Copy Pods Resources */,
+				5770D4E602465D4BD2B1EAC8 /* [CP] Embed Pods Frameworks */,
+				F93964299758F3CE964782CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,12 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "DMPickerView_Tests" */;
 			buildPhases = (
-				A81102E5D869844F5A35588C /* Check Pods Manifest.lock */,
+				E3BCA57768709EAA1A4C7D81 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				EF10E029FFA06B3A73ED133E /* Embed Pods Frameworks */,
-				2579DAAE74AC12421EE03FDA /* Copy Pods Resources */,
+				A1801755ACA2A4AE9B601CEE /* [CP] Embed Pods Frameworks */,
+				3839D0A2C708383EF3EA9666 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,8 +247,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DM;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Olivier Tranzer";
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = hackstuces;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = 6S87W7XCHS;
@@ -282,8 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09BBD0C61BDE3B8100A5A75D /* Launch Screen.storyboard in Resources */,
-				09BBD0CB1BDE3BBD00A5A75D /* DMViewController.xib in Resources */,
+				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				FC5CD8661E72C55500884585 /* DMViewController.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -300,14 +300,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2579DAAE74AC12421EE03FDA /* Copy Pods Resources */ = {
+		3839D0A2C708383EF3EA9666 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,44 +315,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMPickerView_Tests/Pods-DMPickerView_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F1B97AED7D0B65692CA2E94 /* Copy Pods Resources */ = {
+		5770D4E602465D4BD2B1EAC8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMPickerView_Example/Pods-DMPickerView_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		73A4E9072DF523087431C66A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A3EAB9711B4ADD6B0153E2D3 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,34 +330,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMPickerView_Example/Pods-DMPickerView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A81102E5D869844F5A35588C /* Check Pods Manifest.lock */ = {
+		7EFE3E2D5A4884B8248174CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EF10E029FFA06B3A73ED133E /* Embed Pods Frameworks */ = {
+		A1801755ACA2A4AE9B601CEE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMPickerView_Tests/Pods-DMPickerView_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BCA57768709EAA1A4C7D81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F93964299758F3CE964782CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMPickerView_Example/Pods-DMPickerView_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -398,7 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* DMAppDelegate.m in Sources */,
-				09BBD0CA1BDE3BBD00A5A75D /* DMViewController.m in Sources */,
+				6003F5A7195388D20070C39A /* DMViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +438,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71719F9E1E33DC2100824A3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -459,6 +467,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -473,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -515,16 +524,15 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 525F6F480159B85A7E8E661B /* Pods-DMPickerView_Example.debug.xcconfig */;
+			baseConfigurationReference = E04D53349E86230BCDC2194E /* Pods-DMPickerView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6S87W7XCHS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DMPickerView/DMPickerView-Prefix.pch";
 				INFOPLIST_FILE = "DMPickerView/DMPickerView-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dreem.dmpickerview;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -532,16 +540,15 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A49247240350001D52DF184 /* Pods-DMPickerView_Example.release.xcconfig */;
+			baseConfigurationReference = 7924F3BBEC9B23EC75E10CDE /* Pods-DMPickerView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6S87W7XCHS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DMPickerView/DMPickerView-Prefix.pch";
 				INFOPLIST_FILE = "DMPickerView/DMPickerView-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dreem.dmpickerview;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -549,7 +556,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3D32819AE7D1B75A7D69E47 /* Pods-DMPickerView_Tests.debug.xcconfig */;
+			baseConfigurationReference = 2EE63204FC812CEA8BDF938A /* Pods-DMPickerView_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -564,6 +571,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DMPickerView_Example.app/DMPickerView_Example";
 				WRAPPER_EXTENSION = xctest;
@@ -572,7 +580,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFB30F85E606B7F720AAA8E0 /* Pods-DMPickerView_Tests.release.xcconfig */;
+			baseConfigurationReference = 7D50C52C30F70596222750A2 /* Pods-DMPickerView_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -583,6 +591,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DMPickerView_Example.app/DMPickerView_Example";
 				WRAPPER_EXTENSION = xctest;

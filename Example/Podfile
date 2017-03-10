@@ -1,12 +1,11 @@
-source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'DMPickerView_Example', :exclusive => true do
-  pod "DMPickerView", :path => "../"
-end
+target 'DMPickerView_Example' do
+  pod 'DMPickerView', :path => '../'
 
-target 'DMPickerView_Tests', :exclusive => true do
-  pod "DMPickerView", :path => "../"
+  target 'DMPickerView_Tests' do
+    inherit! :search_paths
 
-  
+    
+  end
 end

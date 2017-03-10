@@ -2,8 +2,8 @@
 //  DMPickerViewTests.m
 //  DMPickerViewTests
 //
-//  Created by Olivier Tranzer on 10/26/2015.
-//  Copyright (c) 2015 Olivier Tranzer. All rights reserved.
+//  Created by hackstuces on 03/10/2017.
+//  Copyright (c) 2017 hackstuces. All rights reserved.
 //
 
 @import XCTest;
