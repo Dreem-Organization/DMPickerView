@@ -26,7 +26,9 @@
 
 @end
 
-@implementation DMPickerView
+@implementation DMPickerView {
+    NSInteger previousIndex;
+}
 
 #pragma mark - Init
 
@@ -370,8 +372,50 @@
             label.alpha = self.shouldSelect ? alphaScale : self.minAlphaScale;
         }
     }
+
+    NSInteger currentIndex = [self findMiddleIndex];
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:closestIndex:previousIndex:)]) {
+        [self.delegate pickerView:self closestIndex:currentIndex previousIndex:previousIndex];
+    }
+    
+    if (currentIndex != previousIndex) {
+        previousIndex = currentIndex;
+    }
 }
 
-
+- (NSInteger)findMiddleIndex {
+    CGPoint position = self.scrollview.contentOffset;
+    // Compute the offset of the middle of the visible scroller
+    CGFloat middlePosition;
+    if (self.orientation == HORIZONTAL) {
+        middlePosition = position.x + CGRectGetWidth(self.scrollview.bounds) / 2;
+    } else {
+        middlePosition = position.y + CGRectGetHeight(self.scrollview.bounds) / 2;
+    }
+    
+    // Find nearest label
+    CGFloat minDistance = MAX(self.scrollview.contentSize.width, self.scrollview.contentSize.height);
+    NSUInteger index = -1;
+    for (int i = 0 ; i < [self.labels count] ; i++) {
+        UILabel *label = self.labels[i];
+        // Calculate distance from middle
+        CGFloat distanceFromMiddle;
+        if (self.orientation == HORIZONTAL) {
+            distanceFromMiddle = CGRectGetMidX(label.frame) - middlePosition;
+            if (ABS(distanceFromMiddle) < ABS(minDistance)) {
+                minDistance = distanceFromMiddle;
+                index = i;
+            }
+        } else {
+            distanceFromMiddle = CGRectGetMidY(label.frame) - middlePosition;
+            if (ABS(distanceFromMiddle) < ABS(minDistance)) {
+                minDistance = distanceFromMiddle;
+                index = i;
+            }
+        }
+    }
+    return index;
+}
 
 @end
