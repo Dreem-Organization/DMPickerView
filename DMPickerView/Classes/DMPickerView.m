@@ -27,7 +27,7 @@
 @end
 
 @implementation DMPickerView {
-    NSUInteger previousIndex;
+    NSInteger previousIndex;
 }
 
 #pragma mark - Init
@@ -373,7 +373,7 @@
         }
     }
 
-    NSUInteger currentIndex = [self findMiddleIndex];
+    NSInteger currentIndex = [self findMiddleIndex];
 
     if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:closestIndex:previousIndex:)]) {
         [self.delegate pickerView:self closestIndex:currentIndex previousIndex:previousIndex];
@@ -384,7 +384,7 @@
     }
 }
 
-- (NSUInteger)findMiddleIndex {
+- (NSInteger)findMiddleIndex {
     CGPoint position = self.scrollview.contentOffset;
     // Compute the offset of the middle of the visible scroller
     CGFloat middlePosition;
@@ -396,7 +396,7 @@
     
     // Find nearest label
     CGFloat minDistance = MAX(self.scrollview.contentSize.width, self.scrollview.contentSize.height);
-    NSUInteger index = -1;
+    NSInteger index = -1;
     for (int i = 0 ; i < [self.labels count] ; i++) {
         UILabel *label = self.labels[i];
         // Calculate distance from middle
