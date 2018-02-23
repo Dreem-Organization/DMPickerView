@@ -27,7 +27,7 @@
 @end
 
 @implementation DMPickerView {
-    NSInteger previousIndex;
+    NSUInteger previousIndex;
 }
 
 #pragma mark - Init
@@ -373,7 +373,7 @@
         }
     }
 
-    NSInteger currentIndex = [self findMiddleIndex];
+    NSUInteger currentIndex = [self findMiddleIndex];
 
     if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:closestIndex:previousIndex:)]) {
         [self.delegate pickerView:self closestIndex:currentIndex previousIndex:previousIndex];
@@ -384,7 +384,7 @@
     }
 }
 
-- (NSInteger)findMiddleIndex {
+- (NSUInteger)findMiddleIndex {
     CGPoint position = self.scrollview.contentOffset;
     // Compute the offset of the middle of the visible scroller
     CGFloat middlePosition;
