@@ -179,17 +179,20 @@
     
     // Set font
     UIFont *font = [UIFont fontWithName:@"Helvetica" size:30];
-    if ([self.datasource respondsToSelector:@selector(fontForLabelsForPickerView:)]) {
-        font = [self.datasource fontForLabelsForPickerView:self];
-    }
     
     // Set color
     UIColor *textColor = [UIColor whiteColor];
-    if ([self.datasource respondsToSelector:@selector(textColorForLabelsForPickerView:)]) {
-        textColor = [self.datasource textColorForLabelsForPickerView:self];
-    }
     
     for (int i = 0 ; i < [texts count] ; i++) {
+        
+        if ([self.datasource respondsToSelector:@selector(fontForLabelsForPickerView:AtIndex:)]) {
+            font = [self.datasource fontForLabelsForPickerView:self AtIndex:i];
+        }
+        
+        if ([self.datasource respondsToSelector:@selector(textColorForLabelsForPickerView:AtIndex:)]) {
+            textColor = [self.datasource textColorForLabelsForPickerView:self AtIndex:i];
+        }
+        
         // Create and customize label
         UILabel *label = [UILabel new];
         label.font = font;
