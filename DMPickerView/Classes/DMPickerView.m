@@ -42,6 +42,7 @@
     self.scrollview.showsHorizontalScrollIndicator = NO;
     self.scrollview.showsVerticalScrollIndicator = NO;
     self.scrollview.decelerationRate = UIScrollViewDecelerationRateFast;
+    self.scrollview.scrollsToTop = NO;
     [self addSubview:self.scrollview];
     
     // Default property values
