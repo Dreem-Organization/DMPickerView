@@ -20,7 +20,8 @@
 // Views
 @property (nonatomic, strong) UIScrollView *scrollview;
 @property (nonatomic, strong) NSMutableArray *labels;
-
+@property (nonatomic, strong) UILabel *currentLabel;
+@property (nonatomic) CGFloat labelSize;
 // Data
 @property (nonatomic) NSUInteger index;
 
@@ -142,6 +143,8 @@
         }
     }
     
+    self.labelSize = CGRectGetHeight(selectedLabel.bounds);
+    
     // Update scrollview contentsize
     if (self.orientation == HORIZONTAL) {
         self.scrollview.contentSize = CGSizeMake(currentX + CGRectGetWidth(self.scrollview.bounds) / 2,
@@ -167,7 +170,6 @@
     
     // Reinit array
     self.labels = [NSMutableArray array];
-
     // Get texts from datasource
     NSUInteger n = [self.datasource numberOfLabelsForPickerView:self];
     NSMutableArray *texts = [NSMutableArray array];
@@ -231,7 +233,7 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:didSelectLabelAtIndex:userTriggered:)]) {
         [self.delegate pickerView:self didSelectLabelAtIndex:self.index userTriggered:YES];
     }
-
+    
     // Update views if the option was selected
     if (self.shouldUpdateRenderingOnlyWhenSelected) {
         [self updateViews];
@@ -288,10 +290,8 @@
         CGPoint newContentOffset = CGPointMake(CGRectGetMinX(self.bounds), self.scrollview.contentOffset.y + minDistance);
         [self.scrollview setContentOffset:newContentOffset animated:YES];
     }
-
     // Update index
     self.index = index;
-
 }
 
 #pragma mark - Tap label
@@ -319,7 +319,7 @@
             [self.scrollview setContentOffset:newContentOffset animated:animated];
         }
     }
-
+    
     // Notify delegate
     self.index = index;
     if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:didSelectLabelAtIndex:userTriggered:)]) {
@@ -334,7 +334,7 @@
  */
 - (void)updateViews {
     CGPoint position = self.scrollview.contentOffset;
-
+    
     if (self.orientation == HORIZONTAL) {
         // Compute the offset of the middle of the visible scroller
         CGFloat middlePosition = position.x + CGRectGetWidth(self.scrollview.bounds) / 2;
@@ -365,6 +365,16 @@
             CGFloat sizeScale = MAX(1 - self.sizeScaleRatio * distanceFromMiddle/CGRectGetHeight(self.scrollview.bounds), self.minSizeScale);
             label.transform = CGAffineTransformScale(CGAffineTransformIdentity, sizeScale, sizeScale);
             
+            if (@available(iOS 10.0, *)) {
+                if (label != _currentLabel) {
+                    if (CGRectIntersectsRect(CGRectMake(0, CGRectGetMidY(self.scrollview.bounds) - (self.labelSize / 2), _scrollview.bounds.size.width, self.labelSize), CGRectMake(label.frame.origin.x, CGRectGetMidY(label.frame), CGRectGetWidth(label.bounds), 1))) {
+                        UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator new] initWithStyle: UIImpactFeedbackStyleMedium];
+                        [generator impactOccurred];
+                        _currentLabel = label;
+                    }
+                }
+            }
+            
             // Change alpha according to distance
             CGFloat alphaScale = MAX(1 - self.alphaScaleRatio * distanceFromMiddle/CGRectGetHeight(self.scrollview.bounds), self.minAlphaScale);
             label.alpha = self.shouldSelect ? alphaScale : self.minAlphaScale;
@@ -375,3 +385,4 @@
 
 
 @end
+
