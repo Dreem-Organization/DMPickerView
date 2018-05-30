@@ -27,7 +27,9 @@
 
 @end
 
-@implementation DMPickerView
+@implementation DMPickerView {
+    NSInteger previousIndex;
+}
 
 #pragma mark - Init
 
@@ -41,6 +43,7 @@
     self.scrollview.showsHorizontalScrollIndicator = NO;
     self.scrollview.showsVerticalScrollIndicator = NO;
     self.scrollview.decelerationRate = UIScrollViewDecelerationRateFast;
+    self.scrollview.scrollsToTop = NO;
     [self addSubview:self.scrollview];
     
     // Default property values
@@ -179,17 +182,20 @@
     
     // Set font
     UIFont *font = [UIFont fontWithName:@"Helvetica" size:30];
-    if ([self.datasource respondsToSelector:@selector(fontForLabelsForPickerView:)]) {
-        font = [self.datasource fontForLabelsForPickerView:self];
-    }
     
     // Set color
     UIColor *textColor = [UIColor whiteColor];
-    if ([self.datasource respondsToSelector:@selector(textColorForLabelsForPickerView:)]) {
-        textColor = [self.datasource textColorForLabelsForPickerView:self];
-    }
     
     for (int i = 0 ; i < [texts count] ; i++) {
+        
+        if ([self.datasource respondsToSelector:@selector(fontForLabelsForPickerView:AtIndex:)]) {
+            font = [self.datasource fontForLabelsForPickerView:self AtIndex:i];
+        }
+        
+        if ([self.datasource respondsToSelector:@selector(textColorForLabelsForPickerView:AtIndex:)]) {
+            textColor = [self.datasource textColorForLabelsForPickerView:self AtIndex:i];
+        }
+        
         // Create and customize label
         UILabel *label = [UILabel new];
         label.font = font;
@@ -380,9 +386,51 @@
             label.alpha = self.shouldSelect ? alphaScale : self.minAlphaScale;
         }
     }
+
+    NSInteger currentIndex = [self findMiddleIndex];
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:closestIndex:previousIndex:)]) {
+        [self.delegate pickerView:self closestIndex:currentIndex previousIndex:previousIndex];
+    }
+    
+    if (currentIndex != previousIndex) {
+        previousIndex = currentIndex;
+    }
 }
 
-
+- (NSInteger)findMiddleIndex {
+    CGPoint position = self.scrollview.contentOffset;
+    // Compute the offset of the middle of the visible scroller
+    CGFloat middlePosition;
+    if (self.orientation == HORIZONTAL) {
+        middlePosition = position.x + CGRectGetWidth(self.scrollview.bounds) / 2;
+    } else {
+        middlePosition = position.y + CGRectGetHeight(self.scrollview.bounds) / 2;
+    }
+    
+    // Find nearest label
+    CGFloat minDistance = MAX(self.scrollview.contentSize.width, self.scrollview.contentSize.height);
+    NSInteger index = -1;
+    for (int i = 0 ; i < [self.labels count] ; i++) {
+        UILabel *label = self.labels[i];
+        // Calculate distance from middle
+        CGFloat distanceFromMiddle;
+        if (self.orientation == HORIZONTAL) {
+            distanceFromMiddle = CGRectGetMidX(label.frame) - middlePosition;
+            if (ABS(distanceFromMiddle) < ABS(minDistance)) {
+                minDistance = distanceFromMiddle;
+                index = i;
+            }
+        } else {
+            distanceFromMiddle = CGRectGetMidY(label.frame) - middlePosition;
+            if (ABS(distanceFromMiddle) < ABS(minDistance)) {
+                minDistance = distanceFromMiddle;
+                index = i;
+            }
+        }
+    }
+    return index;
+}
 
 @end
 

@@ -97,12 +97,12 @@ typedef enum {
 /**
  Font for the labels
  */
-- (UIFont *)fontForLabelsForPickerView:(DMPickerView *)pickerView;
+- (UIFont *)fontForLabelsForPickerView:(DMPickerView *)pickerView AtIndex:(NSUInteger)index;
 
 /**
  Text color for the labels
  */
-- (UIColor *)textColorForLabelsForPickerView:(DMPickerView *)pickerView;
+- (UIColor *)textColorForLabelsForPickerView:(DMPickerView *)pickerView AtIndex:(NSUInteger)index;
 
 
 @end
@@ -115,5 +115,6 @@ typedef enum {
  @param userTriggered The selection is triggered by the user
  */
 - (void)pickerView:(DMPickerView *)pickerView didSelectLabelAtIndex:(NSUInteger)index userTriggered:(BOOL)userTriggered;
+- (void)pickerView:(DMPickerView *)pickerView closestIndex:(NSInteger)closestIndex previousIndex:(NSInteger)previousIndex;
 
 @end
